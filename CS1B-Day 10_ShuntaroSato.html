@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<style type="text/css">
+	body {
+    margin: 0;
+    padding: 0;
+}
+header h1, header h2 {
+    margin: 0;
+}
+.content {
+    padding: 1em 5em;
+}
+.content h3 {
+    margin-top: 0;
+}
+#sitenav ol {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+#sitenav li {
+    display: inline;
+    padding-left: 1em;
+    margin-left: 1em;
+    border-left: 1px solid black;
+}
+#sitenav li:first-child {
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+}
+#main {
+    padding: 0 12em 2em 2em;
+    position: relative;
+}
+#sidebar {
+    position: absolute;
+    width: 10em;
+    right: 1em; 
+    top: 1em;
+}
+#sidebar h3 {
+    margin: 0;
+    padding: 0.125em 0.25em;
+}
+#sidebar ol {
+    margin: 0 0 1em 0;
+    padding: 0.125em 0.25em;
+}
+#sidebar li {
+    display: block;
+    padding: 0.125em 0;
+}
+footer {
+    padding: 0.5em 5em;
+}
+footer p {
+    margin: 0em; 
+}
+body {
+    font-family: Optima, sans-serif;
+    background-color: silver;
+}
+a:link {
+    color: #055;
+}
+a:visited {
+    color: #404;
+}
+header {
+    text-align: center;
+    color: white;
+    background-color: #87cefa;
+}
+header h1 {
+    color: #2f4f4f;
+    font-size: 250%;
+}
+header h2 {
+    font-weight: normal;
+    font-style: italic;
+}
+#sitenav {
+    color: white;
+    background-color: #2f4f4f;
+}
+#sitenav ol {
+    font-size: 90%;
+    text-align: center;
+}
+#sitenav li {
+    border-left: 1px solid #DD0;
+}
+#sitenav li a {
+    color: white;
+}
+#sitenav li a:link, #sitenav li a:visited {
+    color: white; 
+    text-decoration: none;
+}
+#sitenav li a:hover {
+    color: #b0e0e6;
+}
+#main {
+    background-color: #87cefa;
+}
+.content {
+    background-color: white;
+}
+.content p {
+    font-size: 90%;
+    line-height: 1.4;
+}
+#sidebar h3 {
+    font-size: 100%;
+    color: white;
+    font-weight: normal;
+    background-color:#2f4f4f;
+}
+#sidebar ol {
+    background-color: white; 
+    border: 2px solid #2f4f4f;
+    border-top: 0;
+}
+#sidebar li {
+    font-size: 85%;
+}
+#sidebar li a:link, #sidebar li a:visited {
+    text-decoration: none;
+    color: #87cefa;
+}
+#sidebar li a:hover {
+    color: #2f4f4f;
+}
+footer {
+    background-color: #2f4f4f; 
+    color: white;
+}
+footer p {
+    font-size: 85%;
+}
+footer p a:link, footer p a:visited {
+    color: #DDDD00;
+}
+	</style>
+        <meta charset="utf-8">
+        <title>Shuntaro's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/colors_and_fonts.css">
+    </head>
+    <body>
+        <header>
+            <h1>Shuntaro's Porftolio</h1>
+           
+            <nav id="sitenav">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="http://www.ict-kanazawa.ac.jp" target="_blank">About ICT</a></li>
+                    <li><a href="#">Other</a></li>
+                </ol>
+            </nav>
+        </header>
+        <div id="main">
+            <article class="content" id="welcome">
+                <h3>Welcome to the Portolio Website of Shuntaro</h3>
+                <img src="images/ICT_School.jpg" alt="[ICT School]">
+ <p>Name: Shuntaro Sato 佐藤　俊太朗</p>
+ <p>Age: 16</p>
+ <p>I like play computer game. I am into play mincraft. I do not like spelunking, I like craft something big things such as castle or house and so on.</p>            
+  
+            </article>
+            <article class="content" id="hospital">
+                <h3>Robocon project</h3>
+                <img src="file:///C:/Users/Shuntaro%20Sato/Downloads/ロボコンポスター改.pdf" alt="[Robocon project]">
+                <p>I was active from May to August.
+                </p>
+            </article>
+            <article class="content" id="shinkai">
+                <h3>Engineerng design 1A</h3>
+                <img src="<iframe width="560" height="315" src="https://www.youtube.com/embed/j7WgHiGvIhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" alt="[Engineering design 1A]">
+                <p>This is a movie about bad design which you found. I talked about problem of can.  
+                </p>
+            </article>
+            <aside id="sidebar">
+                <h3>RobLab Projects</h3>
+                <ol>
+                    <li><a href="#welcome">Top</a></li>
+                    <li><a href="#hospital">Robocon project</a></li>
+                    <li><a href="#shinkai">Engineering design 1A</a></li>
+                </ol>
+            </aside>
+            <footer>
+                <p>Shuntaro is at the 
+                    <a href="http://www.ict-kanazawa.ac.jp">International College of Technology</a> in Kanazawa, Japan.
+                </p>
+            </footer>
+        </div>
+    </body>
+
+</html>
