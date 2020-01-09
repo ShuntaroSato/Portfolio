@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<style type="text/css">
+	body {
+    margin: 0;
+    padding: 0;
+}
+header h1, header h2 {
+    margin: 0;
+}
+.content {
+    padding: 1em 5em;
+}
+.content h3 {
+    margin-top: 0;
+}
+#sitenav ol {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+#sitenav li {
+    display: inline;
+    padding-left: 1em;
+    margin-left: 1em;
+    border-left: 1px solid black;
+}
+#sitenav li:first-child {
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+}
+#main {
+    padding: 0 2em 2em 12em;
+    position: relative;
+}
+#sidebar {
+    position: absolute;
+    width: 10em;
+    left: 1em; 
+    top: 1em;
+}
+#sidebar h3 {
+    margin: 0;
+    padding: 0.125em 0.25em;
+}
+#sidebar ol {
+    margin: 0 0 1em 0;
+    padding: 0.125em 0.25em;
+}
+#sidebar li {
+    display: block;
+    padding: 0.125em 0;
+}
+footer {
+    padding: 0.5em 5em;
+}
+footer p {
+    margin: 0em; 
+}
+body {
+    font-family: Optima, sans-serif;
+    background-color: silver;
+}
+a:link {
+    color: #055;
+}
+a:visited {
+    color: #404;
+}
+header {
+    text-align: center;
+    color: white;
+    background-color: #87cefa;
+}
+header h1 {
+    color: #2f4f4f;
+    font-size: 250%;
+}
+header h2 {
+    font-weight: normal;
+    font-style: italic;
+}
+#sitenav {
+    color: white;
+    background-color: #2f4f4f;
+}
+#sitenav ol {
+    font-size: 90%;
+    text-align: center;
+}
+#sitenav li {
+    border-left: 1px solid #DD0;
+}
+#sitenav li a {
+    color: white;
+}
+#sitenav li a:link, #sitenav li a:visited {
+    color: white; 
+    text-decoration: none;
+}
+#sitenav li a:hover {
+    color: #b0e0e6;
+}
+#main {
+    background-color: #87cefa;
+}
+.content {
+    background-color: white;
+}
+.content p {
+    font-size: 90%;
+    line-height: 1.4;
+}
+#sidebar h3 {
+    font-size: 100%;
+    color: white;
+    font-weight: normal;
+    background-color:#2f4f4f;
+}
+#sidebar ol {
+    background-color: white; 
+    border: 2px solid #2f4f4f;
+    border-top: 0;
+}
+#sidebar li {
+    font-size: 85%;
+}
+#sidebar li a:link, #sidebar li a:visited {
+    text-decoration: none;
+    color: #87cefa;
+}
+#sidebar li a:hover {
+    color: #2f4f4f;
+}
+footer {
+    background-color: #2f4f4f; 
+    color: white;
+}
+footer p {
+    font-size: 85%;
+}
+footer p a:link, footer p a:visited {
+    color: #DDDD00;
+}
+@media(max-width:600px){
+#main{
+padding:0;
+}
+#sidebar{
+visibility: hidden;
+}
+td{
+	display:block;
+	position:relative;
+	padding-left: 30%
+}
+td:nth-of-type(1):before {content: "Name: "} 
+td:nth-of-type(2):before {content: "Description: "} 
+td:nth-of-type(3):before {content: "More Info: "}
+ 
+  thead tr{ 
+ display: none; 
+ }
+ 
+ tr:nth-of-type(odd) {background: lightgray;}
+ 
+}
+
+td:before{
+ position: absolute; 
+ top: 1px; left: 2px; 
+ padding-right: 20px; 
+ }
+
+table{
+width: 100%;
+max-width: 800px;
+}
+
+
+
+	</style>
+        <meta charset="utf-8">
+		<meta name="viewpoint" width="mobile-size">
+        <title>Shuntaro's Portfolio</title>
+ 
+    </head>
+    <body>
+        <header>
+            <h1>Shuntaro's Porftolio</h1>
+           
+            <nav id="sitenav">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="http://www.ict-kanazawa.ac.jp" target="_blank">About ICT</a></li>
+                    <li><a href="file:///C:/Users/Shuntaro%20Sato/Documents/Computer%20Skills%201B/Portfolio/CS1B-Day%206_ShuntaroSato.html">My favorite album & Music</a></li>
+                </ol>
+            </nav>
+        </header>
+        <div id="main">
+            <article class="content" id="welcome">
+                
+		 <table>
+ 
+  
+    <caption>
+      My hobbies 
+    </caption>
+ 
+   <thead> 
+    <th>Name</th> 
+    <th>Dscription</th>
+    <th>Links</th>
+  </thead> 
+  <tr>
+    <td>Anime</td>
+    <td>Anime is an art</td>
+    <td>
+    <a                          href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%8B%E3%83%A1">Link
+    </a>
+    </td>
+  </tr>
+  <tr>
+  <td>Foot ball</td>
+  <td>Foot ball is called soccer in America</td>
+  <td><a href="https://en.wikipedia.org/wiki/Association_football">Link</a>
+  </tr>
+  <tr>
+    <td>Ramen</td>
+    <td>Japanese food</td>
+    <td><a href="https://en.wikipedia.org/wiki/Ramen">Link
+      </a>
+    </td>
+  </tr>
+</table>  
+  
+            </article>
+            <aside id="sidebar">
+                <h3>RobLab Projects</h3>
+                <ol>
+                    <li><a href="#welcome">Top</a></li>
+                    <li><a href="#hospital">Robocon project</a></li>
+                    <li><a href="#shinkai">Engineering design 1A</a></li>
+                </ol>
+            </aside>
+            <footer>
+                <p>Shuntaro is at the 
+                    <a href="http://www.ict-kanazawa.ac.jp">International College of Technology</a> in Kanazawa, Japan.
+                </p>
+            </footer>
+        </div>
+    </body>
+
+</html>
