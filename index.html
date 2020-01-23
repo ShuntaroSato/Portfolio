@@ -151,6 +151,24 @@ padding:0;
 #sidebar{
 visibility: hidden;
 }
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#hospital img:hover {
+border-color: blue;
+border: solid;
+}
 
 
 	</style>
@@ -182,14 +200,19 @@ visibility: hidden;
             </article>
             <article class="content" id="hospital">
                 <h3>Robocon project</h3>
-                <img width="100%" max-width="200px" height="auto" src="Microsoft Edge 2019_12_18 20_20_01 (2).png" alt="[Robocon project]">
+                <a href="Microsoft Edge 2019_12_18 20_20_01 (2).png" target="_blank" ><img id="poster" width="30%" max-width="200px" height="auto" src="Microsoft Edge 2019_12_18 20_20_01 (2).png" href alt="[Robocon project]"></a>
                 <p>I was active from May to August.
                 </p>
             </article>
             <article class="content" id="shinkai">
                 <h3>Engineerng design 1A</h3>
-                <iframe width="100%" max-width="200px" height="auto" src="https://www.youtube.com/embed/j7WgHiGvIhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" alt="[Engineering design 1A]">
-                </iframe>
+				
+				<div class="container">
+				<iframe src="https://www.youtube.com/embed/j7WgHiGvIhs" 
+				frameborder="0" allowfullscreen class="video"></iframe>
+				</div>
+				
+				
 				<p>This is a movie about bad design which you found. I talked about problem of can.</p>
             </article>
             <aside id="sidebar">
