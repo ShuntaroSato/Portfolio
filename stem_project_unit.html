@@ -73,6 +73,7 @@
       </ol>
     </p>
     <form>
+      
       <f1>↓↓INPUT↓↓</f1><br>
       <input type="text" id="input1">
       <select neme="Length" id=inU>
@@ -96,6 +97,50 @@
       <span type="text" id="inputUnit"></span><br>
       <input type="button" onclick="getInput()" value="="><br>
       <input type="button" onclick="resetAll()" value="RESET ALL">
+      <p id="tabcontrol">
+        <a href="#tabpage1">Length</a>
+        <a href="#tabpage2">Weight</a>
+        <a href="#tabpage3">Time</a>
+     </p>
+   
+     <div id="tabbody">
+      <div id="tabpage1">…… tab1 ……</div>
+      <div id="tabpage2">…… tab2 ……</div>
+      <div id="tabpage3">…… tab3 ……</div>
+      <script type="text/javascript">
+
+        var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
+        var pages = document.getElementById('tabbody').getElementsByTagName('div');
+        
+        function changeTab() {
+
+           var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
+
+           for(var i=0; i<pages.length; i++) {
+              if( pages[i].id != targetid ) {
+                 pages[i].style.display = "none";
+              }
+              else {
+                 pages[i].style.display = "block";
+              }
+           }
+        
+           for(var i=0; i<tabs.length; i++) {
+              tabs[i].style.zIndex = "0";
+           }
+           this.style.zIndex = "10";
+        
+           return false;
+        }
+        
+        for(var i=0; i<tabs.length; i++) {
+           tabs[i].onclick = changeTab;
+        }
+        
+        tabs[0].onclick();
+        
+        </script>
+   </div>
     </form>
   </div>
 </body>
