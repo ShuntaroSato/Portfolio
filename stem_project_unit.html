@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Programming STEM Project - [Conversion Calculator]</title>
+  <style>
+    /* styles for layout */
+    #outputstyle {
+      /*
+      margin-left: auto;
+      margin-right: auto;
+      */
+      border: solid;
+      border-color: black;
+      border: 1px solid;
+      width: 100px;
+      height: 20px;
+      float: left;
+      /*
+      color: rgb(38, 0, 255);
+     font-weight: bold;
+     */
+    }
+
+    #units {
+      padding: 5px;
+      float: left;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    div.center {
+      width: 800px;
+    }
+
+    /* styles for colors and fonts */
+    /*.answer {
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(38, 0, 255);
+     font-weight: bold;
+    }*/
+
+    #input1 {
+      /*
+      margin-left: auto;
+      margin-right: auto;
+      */
+      border: solid;
+      border-color: black;
+      border: 1px solid;
+      width: 100px;
+      height: 20px;
+      /*
+      color: rgb(38, 0, 255);
+     font-weight: bold;
+     */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <h3>Programming STEM Project - [Conversion Calculator]</h3>
+    <p>
+      <ol>
+      <li>Choose an input unit and output unit.</li>
+      <li>Input number. ※Only accept English numbers.</li>
+      </ol>
+    </p>
+    <form>
+      
+      <f1>↓↓INPUT↓↓</f1><br>
+      <input type="text" id="input1">
+      <select neme="Length" id=inU>
+        <optgroup label="Length">
+          <option value=1>Millimeter</option>
+          <option value=2>Centimeter</option>
+          <option value=3>Meter</option>
+          <option value=4>Kilometer</option>
+        </optgroup>
+      </select><br>
+      <f1>↓↓OUTPUT↓↓</f1><br>
+      <div id="outputstyle"><span type="text" id="output1" class="answer"></span></div>
+      <div id="units"><select neme="Length" id="outU">
+          <optgroup label="Length">
+            <option value=1>Millimeter</option>
+            <option value=2>Centimeter</option>
+            <option value=3>Meter</option>
+            <option value=4>Kilometer</option>
+          </optgroup>
+        </select></div><br>
+      <span type="text" id="inputUnit"></span><br>
+      <input type="button" onclick="getInput()" value="="><br>
+      <input type="button" onclick="resetAll()" value="RESET ALL">
+      <p id="tabcontrol">
+        <a href="#tabpage1">Length</a>
+        <a href="#tabpage2">Weight</a>
+        <a href="#tabpage3">Time</a>
+     </p>
+   
+     <div id="tabbody">
+      <div id="tabpage1">…… tab1 ……</div>
+      <div id="tabpage2">…… tab2 ……</div>
+      <div id="tabpage3">…… tab3 ……</div>
+      <script type="text/javascript">
+
+        var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
+        var pages = document.getElementById('tabbody').getElementsByTagName('div');
+        
+        function changeTab() {
+
+           var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
+
+           for(var i=0; i<pages.length; i++) {
+              if( pages[i].id != targetid ) {
+                 pages[i].style.display = "none";
+              }
+              else {
+                 pages[i].style.display = "block";
+              }
+           }
+        
+           for(var i=0; i<tabs.length; i++) {
+              tabs[i].style.zIndex = "0";
+           }
+           this.style.zIndex = "10";
+        
+           return false;
+        }
+        
+        for(var i=0; i<tabs.length; i++) {
+           tabs[i].onclick = changeTab;
+        }
+        
+        tabs[0].onclick();
+        
+        </script>
+   </div>
+    </form>
+  </div>
+</body>
+<script>
+
+  /*
+  You can change anything on this page--HTML tags, CSS styles, JavaScript 
+  functions, etc. Do what you need to make it suitable for your STEM problem.
+  The lines of YOUR CODE are just a suggestion.
+
+  The getInput function will take user input from the page. You should call  
+  your functions from inside the getInput function.
+  
+  The writeOutput function will write some given text to the output span on
+  the page. You can call this function with your code when you have a result.
+  */
+
+  // This function will get the text entered into the "input" text field.
+  // Then it calls another function with the input as an argument.
+  function getInput() {
+    let inputField = document.getElementById("input1");
+    let input = inputField.value;
+
+    console.log(inU.value);
+    console.log(outU.value);
+
+    if (inU.value == outU.value) {
+      console.log("milli to milli");
+      input = input * 1;
+
+    }else if (inU.value == 1 && outU.value == 2) {
+      console.log("milli to centi");
+      input = input / 10;
+
+    }else if (inU.value == 1 && outU.value == 3){
+      console.log("milli to meter");
+      input = input / 100;
+    }else if (inU.value == 1 && outU.value == 4){
+      console.log("milli to kilo");
+      input = input / 1000;
+//----------
+    }else if (inU.value == 2 && outU.value == 1) {
+      console.log("centi to mili");
+      input = input * 10;
+
+    }else if (inU.value == 2 && outU.value == 3){
+      console.log("centi to meter");
+      input = input / 100;
+    }else if (inU.value == 2 && outU.value == 4){
+      console.log("centi to kilo");
+      input = input / 1000;
+//----------      
+    }else if (inU.value == 3 && outU.value == 1) {
+      console.log("meter to milli");
+      input = input * 1000;
+
+    }else if (inU.value == 3 && outU.value == 2){
+      console.log("meter to centi");
+      input = input * 100;
+    }else if (inU.value == 3 && outU.value == 4){
+      console.log("meter to kilo");
+      input = input / 10;
+//--------
+    }else if (inU.value == 4 && outU.value == 1) {
+      console.log("kilo to mili");
+      input = input * 1000000;
+
+    }else if (inU.value == 4 && outU.value == 2){
+      console.log("kilo to centi");
+      input = input * 100000;
+    }else if (inU.value == 4 && outU.value == 3){
+      console.log("kilo to meter");
+      input = input * 1000;
+    }
+
+
+
+    /*
+    if(inU.value = outU.value){
+      input = input*1;
+
+    }else if(inU.value > outU.value){
+      input= input/10;
+
+    }else if(inU.value < ){
+      input= input*10;
+
+    }
+    */
+
+    // do something with the input
+    writeOutput(input); // <-- replace this with YOUR CODE
+  }
+
+
+  // This function will write some text to the output span on the page.
+  function writeOutput(text) {
+    let outputSpan = document.getElementById("output1");
+    outputSpan.innerText = text;
+  }
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  YOUR CODE  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  function InputUnit(text) {
+    let outputSpan = document.getElementById("inputUnit");
+    outputSpan.innerText = text;
+
+    InputUnit();
+  }
+
+  function resetAll() {
+    inputField = document.getElementById("input1");
+    inputField.value = "";
+    writeOutput(" ");
+    alert("RESET?");
+  }
+
+
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑  YOUR CODE  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+
+</script>
+
+</html>
